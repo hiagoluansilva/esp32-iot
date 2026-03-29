@@ -1,64 +1,59 @@
-🇧🇷 Português | 🇺🇸 [English](#english)
+# ESP32 IoT — Monitoramento com MQTT/TLS e Tago.io
 
-# esp32-iot
-
-Sistema IoT com ESP32: temperatura/umidade (DHT11), presença, MQTT/TLS para Tago.io e deep sleep.
-
-## Variáveis publicadas
-
-| Variável | Descrição |
-|----------|-----------|
-| `temperatura` | °C via DHT11 |
-| `umidade` | % via DHT11 |
-| `temp_sentida` | Heat index |
-| `pessoas` | `"Habitado"` / `"Vazio"` |
-| `consumo` | Estimativa de consumo |
-
-## Configuração
-
-```cpp
-const char* ssid     = "YOUR_WIFI_SSID";
-const char* password = "YOUR_WIFI_PASSWORD";
-const char* mqtt_token = "YOUR_TAGO_TOKEN";
-```
-
-## Dependências
-
-`PubSubClient` · `DHT sensor library` · `WiFiClientSecure`
-
-Autores: Hiago Silva / Vitor Becker — Turma 4422
-Centro Tecnológico Liberato — Novo Hamburgo/RS
+🇧🇷 **Português** | 🇺🇸 [English](#english)
 
 ---
 
-<a name="english"></a>
-🇧🇷 [Português](#) | 🇺🇸 English
+## Português
 
-# esp32-iot
+Dispositivo IoT com ESP32 que lê temperatura/umidade (DHT11) e presença (PIR), envia dados para a plataforma Tago.io via MQTT/TLS, e entra em deep sleep entre leituras.
 
-ESP32 IoT system: temperature/humidity (DHT11), presence detection, MQTT/TLS to Tago.io, deep sleep.
+### O que faz
+- Lê **DHT11** (temperatura e umidade) no **GPIO4**
+- Detecta presença via sensor PIR no **GPIO15**
+- Conecta-se ao **broker MQTT com TLS** na porta **8883**
+- Publica dados para a plataforma **Tago.io** usando token de autenticação
+- Entra em **deep sleep por 60 segundos** após cada envio para economizar energia
 
-## Published variables
+### Parâmetros
+| Parâmetro | Valor |
+|---|---|
+| DHT11 | GPIO4 |
+| Sensor PIR | GPIO15 |
+| Porta MQTT | 8883 (TLS) |
+| Plataforma cloud | Tago.io |
+| Deep sleep | 60 segundos |
 
-| Variable | Description |
-|----------|-------------|
-| `temperatura` | °C via DHT11 |
-| `umidade` | % via DHT11 |
-| `temp_sentida` | Heat index |
-| `pessoas` | `"Habitado"` / `"Vazio"` |
-| `consumo` | Power consumption estimate |
+### Segurança
+As credenciais (SSID, senha Wi-Fi, token Tago) devem ser configuradas como constantes no código. **Nunca compartilhe o token real publicamente.**
 
-## Configuration
+### Plataforma
+ESP32 — Arduino Framework
 
-```cpp
-const char* ssid     = "YOUR_WIFI_SSID";
-const char* password = "YOUR_WIFI_PASSWORD";
-const char* mqtt_token = "YOUR_TAGO_TOKEN";
-```
+---
 
-## Dependencies
+## English
 
-`PubSubClient` · `DHT sensor library` · `WiFiClientSecure`
+IoT device on ESP32 that reads temperature/humidity (DHT11) and presence (PIR), sends data to Tago.io via MQTT/TLS, and enters deep sleep between readings.
 
-Authors: Hiago Silva / Vitor Becker — Class 4422
-Centro Tecnológico Liberato — Novo Hamburgo/RS, Brazil
+### What it does
+- Reads **DHT11** (temperature and humidity) on **GPIO4**
+- Detects presence via PIR sensor on **GPIO15**
+- Connects to **MQTT broker with TLS** on port **8883**
+- Publishes data to **Tago.io** platform using an auth token
+- Enters **60-second deep sleep** after each transmission to save energy
+
+### Parameters
+| Parameter | Value |
+|---|---|
+| DHT11 | GPIO4 |
+| PIR sensor | GPIO15 |
+| MQTT port | 8883 (TLS) |
+| Cloud platform | Tago.io |
+| Deep sleep | 60 seconds |
+
+### Security
+Credentials (SSID, Wi-Fi password, Tago token) must be set as constants in the code. **Never share your real token publicly.**
+
+### Platform
+ESP32 — Arduino Framework
