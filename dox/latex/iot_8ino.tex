@@ -1,0 +1,194 @@
+\hypertarget{iot_8ino}{}\doxysection{C\+:/\+Users/\+Hiago/\+Desktop/iot/iot.ino File Reference}
+\label{iot_8ino}\index{C:/Users/Hiago/Desktop/iot/iot.ino@{C:/Users/Hiago/Desktop/iot/iot.ino}}
+
+
+Trabalho I\+OT.  
+
+
+{\ttfamily \#include $<$Wi\+Fi\+Client\+Secure.\+h$>$}\newline
+{\ttfamily \#include $<$Pub\+Sub\+Client.\+h$>$}\newline
+{\ttfamily \#include $<$D\+H\+T.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{iot_8ino_a757bb4e2bff6148de6ef3989b32a0126}\label{iot_8ino_a757bb4e2bff6148de6ef3989b32a0126}} 
+\#define {\bfseries D\+H\+T\+P\+IN}~4
+\item 
+\mbox{\Hypertarget{iot_8ino_a2c509dba12bba99883a5be9341b7a0c5}\label{iot_8ino_a2c509dba12bba99883a5be9341b7a0c5}} 
+\#define {\bfseries D\+H\+T\+T\+Y\+PE}~D\+H\+T11
+\item 
+\mbox{\Hypertarget{iot_8ino_ab957884242ed953bc052b7ec2bb6adad}\label{iot_8ino_ab957884242ed953bc052b7ec2bb6adad}} 
+\#define {\bfseries T\+E\+M\+P\+O\+\_\+\+S\+L\+E\+EP}~60000000
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{iot_8ino_a1753a98a9dfd493a4e701e037a19086a}\label{iot_8ino_a1753a98a9dfd493a4e701e037a19086a}} 
+Pub\+Sub\+Client {\bfseries client} (rede)
+\item 
+\mbox{\Hypertarget{iot_8ino_ad7a1df263f6f823242a112ec11297434}\label{iot_8ino_ad7a1df263f6f823242a112ec11297434}} 
+D\+HT {\bfseries dht} (D\+H\+T\+P\+IN, D\+H\+T\+T\+Y\+PE)
+\item 
+\mbox{\Hypertarget{iot_8ino_a4fc01d736fe50cf5b977f755b675f11d}\label{iot_8ino_a4fc01d736fe50cf5b977f755b675f11d}} 
+void {\bfseries setup} ()
+\item 
+\mbox{\Hypertarget{iot_8ino_afe461d27b9c48d5921c00d521181f12f}\label{iot_8ino_afe461d27b9c48d5921c00d521181f12f}} 
+void {\bfseries loop} ()
+\item 
+void \mbox{\hyperlink{iot_8ino_ab290aba9857043021756a7a8078dbda6}{dht\+\_\+11}} (void)
+\item 
+void \mbox{\hyperlink{iot_8ino_acfa156de5f7c0fd23fd75a553be4eeb5}{conecta\+\_\+tago\+\_\+envia}} (void)
+\item 
+void \mbox{\hyperlink{iot_8ino_ab95178481a0450d6abe8a379471972a5}{detecta\+\_\+pessoas}} (void)
+\item 
+void \mbox{\hyperlink{iot_8ino_a76a13203df94c518598be8efd14eed9c}{conecta\+\_\+wifi}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{iot_8ino_a587ba0cb07f02913598610049a3bbb79}\label{iot_8ino_a587ba0cb07f02913598610049a3bbb79}} 
+const char $\ast$ {\bfseries ssid} = \char`\"{}I\+OT-\/T\+RO\char`\"{}
+\item 
+\mbox{\Hypertarget{iot_8ino_aa4a2ebcb494493f648ae1e6975672575}\label{iot_8ino_aa4a2ebcb494493f648ae1e6975672575}} 
+const char $\ast$ {\bfseries password} = \char`\"{}liberato\char`\"{}
+\item 
+\mbox{\Hypertarget{iot_8ino_ab68b888c3d204a4403af6d1b22f6d07c}\label{iot_8ino_ab68b888c3d204a4403af6d1b22f6d07c}} 
+const char $\ast$ {\bfseries server} = \char`\"{}mqtt.\+tago.\+io\char`\"{}
+\item 
+\mbox{\Hypertarget{iot_8ino_a2282936687946fabef912c9936c02e40}\label{iot_8ino_a2282936687946fabef912c9936c02e40}} 
+const int {\bfseries porta} = 8883
+\item 
+\mbox{\Hypertarget{iot_8ino_afe375e001ac994b04aa66a50d30c85eb}\label{iot_8ino_afe375e001ac994b04aa66a50d30c85eb}} 
+const char $\ast$ {\bfseries mqtt\+\_\+usuario} = \char`\"{}esp32\char`\"{}
+\item 
+\mbox{\Hypertarget{iot_8ino_a23a3cd757380bae1fdb4e30e19ea9b17}\label{iot_8ino_a23a3cd757380bae1fdb4e30e19ea9b17}} 
+const char $\ast$ {\bfseries mqtt\+\_\+token} = \char`\"{}631f9858-\/4c37-\/4c3f-\/9464-\/3d17ee4f37bc\char`\"{}
+\item 
+\mbox{\Hypertarget{iot_8ino_a07293ac9b83a14a79cabdc4919847136}\label{iot_8ino_a07293ac9b83a14a79cabdc4919847136}} 
+String {\bfseries dados}
+\item 
+\mbox{\Hypertarget{iot_8ino_a5c54a158416b352b7f37d04ae3fb60ba}\label{iot_8ino_a5c54a158416b352b7f37d04ae3fb60ba}} 
+String {\bfseries dados1}
+\item 
+\mbox{\Hypertarget{iot_8ino_afbb31904b46e7a10650f62275e7f4ebb}\label{iot_8ino_afbb31904b46e7a10650f62275e7f4ebb}} 
+String {\bfseries dados2}
+\item 
+\mbox{\Hypertarget{iot_8ino_a6104e3fcf1694b28074c99f15fdf21e0}\label{iot_8ino_a6104e3fcf1694b28074c99f15fdf21e0}} 
+String {\bfseries dados3}
+\item 
+\mbox{\Hypertarget{iot_8ino_a3f335be6668467672cd5a222b123b41b}\label{iot_8ino_a3f335be6668467672cd5a222b123b41b}} 
+String {\bfseries dados4}
+\item 
+\mbox{\Hypertarget{iot_8ino_a8347aeb522c9e13e9f376640fad780e7}\label{iot_8ino_a8347aeb522c9e13e9f376640fad780e7}} 
+float {\bfseries temperatura}
+\item 
+\mbox{\Hypertarget{iot_8ino_a7b98aee326fc7fccc562b0df01586821}\label{iot_8ino_a7b98aee326fc7fccc562b0df01586821}} 
+float {\bfseries umidade}
+\item 
+\mbox{\Hypertarget{iot_8ino_a51d07e9818096a040b209d65f33b5537}\label{iot_8ino_a51d07e9818096a040b209d65f33b5537}} 
+float {\bfseries temp\+\_\+sentida}
+\item 
+\mbox{\Hypertarget{iot_8ino_ace020041b890e1bb701de3432a7e4178}\label{iot_8ino_ace020041b890e1bb701de3432a7e4178}} 
+float {\bfseries consumo} = ((4$\ast$143)+(0.\+130$\ast$60))/64
+\item 
+\mbox{\Hypertarget{iot_8ino_abd838da337693a5c4a2b744e4f6a9fe6}\label{iot_8ino_abd838da337693a5c4a2b744e4f6a9fe6}} 
+bool {\bfseries som}
+\item 
+const char $\ast$ {\bfseries test\+\_\+root\+\_\+ca}
+\item 
+\mbox{\Hypertarget{iot_8ino_a7c7e84c4de181e81ef54e68ab2f3433a}\label{iot_8ino_a7c7e84c4de181e81ef54e68ab2f3433a}} 
+Wi\+Fi\+Client\+Secure {\bfseries rede}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Trabalho I\+OT. 
+
+\begin{DoxyAuthor}{Author}
+H\+Iago Silva / Vitor Becker Turma 4422 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{iot_8ino_acfa156de5f7c0fd23fd75a553be4eeb5}\label{iot_8ino_acfa156de5f7c0fd23fd75a553be4eeb5}} 
+\index{iot.ino@{iot.ino}!conecta\_tago\_envia@{conecta\_tago\_envia}}
+\index{conecta\_tago\_envia@{conecta\_tago\_envia}!iot.ino@{iot.ino}}
+\doxysubsubsection{\texorpdfstring{conecta\_tago\_envia()}{conecta\_tago\_envia()}}
+{\footnotesize\ttfamily void conecta\+\_\+tago\+\_\+envia (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Função para Conectar com o servidor da Tago 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{iot_8ino_a76a13203df94c518598be8efd14eed9c}\label{iot_8ino_a76a13203df94c518598be8efd14eed9c}} 
+\index{iot.ino@{iot.ino}!conecta\_wifi@{conecta\_wifi}}
+\index{conecta\_wifi@{conecta\_wifi}!iot.ino@{iot.ino}}
+\doxysubsubsection{\texorpdfstring{conecta\_wifi()}{conecta\_wifi()}}
+{\footnotesize\ttfamily void conecta\+\_\+wifi (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Função para Conectar a rede Wi\+Fi local 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{iot_8ino_ab95178481a0450d6abe8a379471972a5}\label{iot_8ino_ab95178481a0450d6abe8a379471972a5}} 
+\index{iot.ino@{iot.ino}!detecta\_pessoas@{detecta\_pessoas}}
+\index{detecta\_pessoas@{detecta\_pessoas}!iot.ino@{iot.ino}}
+\doxysubsubsection{\texorpdfstring{detecta\_pessoas()}{detecta\_pessoas()}}
+{\footnotesize\ttfamily void detecta\+\_\+pessoas (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Função para Leitura de presença de pessoas 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{iot_8ino_ab290aba9857043021756a7a8078dbda6}\label{iot_8ino_ab290aba9857043021756a7a8078dbda6}} 
+\index{iot.ino@{iot.ino}!dht\_11@{dht\_11}}
+\index{dht\_11@{dht\_11}!iot.ino@{iot.ino}}
+\doxysubsubsection{\texorpdfstring{dht\_11()}{dht\_11()}}
+{\footnotesize\ttfamily void dht\+\_\+11 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Função para Leitura do sensor D\+H\+T11 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{iot_8ino_a7ca4a43df239f9e713dba2c6307d1398}\label{iot_8ino_a7ca4a43df239f9e713dba2c6307d1398}} 
+\index{iot.ino@{iot.ino}!test\_root\_ca@{test\_root\_ca}}
+\index{test\_root\_ca@{test\_root\_ca}!iot.ino@{iot.ino}}
+\doxysubsubsection{\texorpdfstring{test\_root\_ca}{test\_root\_ca}}
+{\footnotesize\ttfamily const char$\ast$ test\+\_\+root\+\_\+ca}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"-\/-\/-\/-\/-\/BEGIN CERTIFICATE-\/-\/-\/-\/-\/\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"MIIEDzCCAvegAwIBAgIBADANBgkqhkiG9w0BAQUFADBoMQswCQYDVQQGEwJVUzEl\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"MCMGA1UEChMcU3RhcmZpZWxkIFRlY2hub2xvZ2llcywgSW5jLjEyMDAGA1UECxMp\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"U3RhcmZpZWxkIENsYXNzIDIgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMDQw\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"NjI5MTczOTE2WhcNMzQwNjI5MTczOTE2WjBoMQswCQYDVQQGEwJVUzElMCMGA1UE\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"ChMcU3RhcmZpZWxkIFRlY2hub2xvZ2llcywgSW5jLjEyMDAGA1UECxMpU3RhcmZp\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"ZWxkIENsYXNzIDIgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwggEgMA0GCSqGSIb3\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"DQEBAQUAA4IBDQAwggEIAoIBAQC3Msj+6XGmBIWtDBFk385N78gDGIc/oav7PKaf\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"8MOh2tTYbitTkPskpD6E8J7oX+zlJ0T1KKY/e97gKvDIr1MvnsoFAZMej2YcOadN\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"+lq2cwQlZut3f+dZxkqZJRRU6ybH838Z1TBwj6+wRir/resp7defqgSHo9T5iaU0\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"X9tDkYI22WY8sbi5gv2cOj4QyDvvBmVmepsZGD3/cVE8MC5fvj13c7JdBmzDI1aa\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"K4UmkhynArPkPw2vCHmCuDY96pzTNbO8acr1zJ3o/WSNF4Azbl5KXZnJHoe0nRrA\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"1W4TNSNe35tfPe/W93bC6j67eA0cQmdrBNj41tpvi/JEoAGrAgEDo4HFMIHCMB0G\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"A1UdDgQWBBS/X7fRzt0fhvRbVazc1xDCDqmI5zCBkgYDVR0jBIGKMIGHgBS/X7fR\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"zt0fhvRbVazc1xDCDqmI56FspGowaDELMAkGA1UEBhMCVVMxJTAjBgNVBAoTHFN0\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"YXJmaWVsZCBUZWNobm9sb2dpZXMsIEluYy4xMjAwBgNVBAsTKVN0YXJmaWVsZCBD\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"bGFzcyAyIENlcnRpZmljYXRpb24gQXV0aG9yaXR5ggEAMAwGA1UdEwQFMAMBAf8w\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"DQYJKoZIhvcNAQEFBQADggEBAAWdP4id0ckaVaGsafPzWdqbAYcaT1epoXkJKtv3\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"L7IezMdeatiDh6GX70k1PncGQVhiv45YuApnP+yz3SFmH8lU+nLMPUxA2IGvd56D\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"eruix/U0F47ZEUD0/CwqTRV/p2JdLiXTAAsgGh1o+Re49L2L7ShZ3U0WixeDyLJl\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"xy16paq8U4Zt3VekyvggQQto8PT7dL5WXXp59fkdheMtlb71cZBDzI0fmgAKhynp\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"VSJYACPq4xJDKVtHCN2MQWplBqjlIapBtJUhlbl90TSrE9atvNziPTnNvT51cKEY\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"WQPJIrSPnNVeKtelttQKbfi3QBFGmh95DmK/D5fs4C8fF5Q=\(\backslash\)n"} \(\backslash\) }
+\DoxyCodeLine{\textcolor{stringliteral}{"-\/-\/-\/-\/-\/END CERTIFICATE-\/-\/-\/-\/-\/\(\backslash\)n"}}
+
+\end{DoxyCode}
